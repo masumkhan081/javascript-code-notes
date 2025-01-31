@@ -1,9 +1,7 @@
-#. javascript code notes
 
-https://github.com/masumkhan081/javascript-code-notes.git
+# javaScript code notes
 
-
-# JavaScript Notes and Code Snippets
+*   **https://github.com/masumkhan081/javascript-code-notes.git**
 
 This repository contains notes and code snippets related to JavaScript programming, covering fundamental concepts, core libraries, and best practices. It serves as a personal reference for learning and consolidating knowledge in JavaScript, intended for personal use to reinforce understanding of JavaScript concepts.
 
