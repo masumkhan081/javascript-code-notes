@@ -1,0 +1,27 @@
+{
+  "name": "javascript-code-notes",
+  "version": "1.0.0",
+  "description": "js code notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "2":"git add . && git commit -m `js code notes`",
+    "3":"git add . && git commit -m `js-code-notes` && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masumkhan081/javascript-code-notes.git"
+  },
+  "keywords": [
+    "Javascript",
+    "Programming_Language",
+    "Coding",
+    "JS_Concepts"
+  ],
+  "author": "Masum-Khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masumkhan081/javascript-code-notes/issues"
+  },
+  "homepage": "https://github.com/masumkhan081/javascript-code-notes#readme"
+}
