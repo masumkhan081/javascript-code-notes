@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+
+
+    <body>
+
+        <p>before script</p>
+        <script src="script.js"></script>
+        <script>
+
+            try {
+
+                if (confirm('Make an error?'))
+                    BAD_CODE();
+            } catch (e) {
+                alert(e.name);
+            } finally {
+                alert('finally');
+            }
+
+        </script>
+        <p>after script</p>
+    </body>
+
+
+
+
+</html>

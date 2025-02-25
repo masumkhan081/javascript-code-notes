@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <script>
+            /*
+             * To change this license header, choose License Headers in Project Properties.
+             * To change this template file, choose Tools | Templates
+             * and open the template in the editor.
+             */
+// ______________________1______________ calling & the response, missing semicolon.
+
+            function say_hello() {
+               getElementById("id_p").innerHTML = "Paragraph changed!";
+            }
+
+            console.log("hello !" + say_hello()); 
+
+
+//
+// ______________________2____________________
+
+            var fuck = () => {
+                console.log("arrow func called");
+            };
+            fuck();
+
+        </script>
+        <button onclick="say_hello();">btn</button>
+        <p id="id_p">hi hello</p>
+    </body>
+</html>

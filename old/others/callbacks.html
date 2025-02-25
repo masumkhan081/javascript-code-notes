@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <button id="btn"> Click me ! </button>
+
+        <script>
+            function task(msg) {
+                let n = 10000000000;
+                while (n > 0) {
+                    n--;
+                }
+                document.write(msg);
+            }
+            //    function fun() {
+            //  document.write(" ha ha aha")
+
+            // emulate time consuming task
+
+            //  
+
+
+            document.write('Start script...');
+            setTimeout(() => {
+                task('Download a file.')
+                        , 1000
+            })
+            document.write('Done!');
+
+
+//            let btn = document.querySelector("#btn");
+//            btn.addEventListener('click', fun)
+
+        </script>
+    </body>
+</html>
