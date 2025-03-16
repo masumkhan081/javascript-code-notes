@@ -25,3 +25,13 @@ function add(a, b, c) {
 }
 
 add(1, 2, 3); // 6
+
+function curriedAdd(a) {
+  return function(b) {
+    return function(c) {
+      return a + b + c;
+    };
+  };
+}
+
+curriedAdd(1)(2)(3); // 6
