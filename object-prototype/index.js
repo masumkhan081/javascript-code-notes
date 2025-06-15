@@ -44,3 +44,35 @@ console.log([1,2,3].describe()); // Output: This object has keys: 0, 1, 2
 // - Use Object.defineProperty to avoid polluting for...in loops.
 // - Always check if the property exists before defining.
 // - Avoid in production unless absolutely necessary.
+
+
+// =============================
+// Array.prototype Extension Example
+// =============================
+// WARNING: Modifying Array.prototype is discouraged in production for the same reasons as Object.prototype.
+// This is for educational/demo purposes only.
+
+// Example: Add a custom function to Array.prototype
+if (!Array.prototype.firstAndLast) {
+  Object.defineProperty(Array.prototype, 'firstAndLast', {
+    value: function() {
+      if (this.length === 0) return { first: undefined, last: undefined };
+      return { first: this[0], last: this[this.length - 1] };
+    },
+    enumerable: false
+  });
+}
+
+// Usage:
+const arr = [10, 20, 30, 40];
+console.log(arr.firstAndLast()); // Output: { first: 10, last: 40 }
+
+// Chaining with default methods:
+const mapped = arr.map(x => x * 2).firstAndLast();
+console.log(mapped); // Output: { first: 20, last: 80 }
+
+// Works with empty arrays too:
+console.log([].firstAndLast()); // Output: { first: undefined, last: undefined }
+
+// Clean up (optional):
+// delete Array.prototype.firstAndLast;
