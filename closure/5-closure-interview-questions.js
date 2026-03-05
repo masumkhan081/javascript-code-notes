@@ -7,7 +7,7 @@ console.log('=== Question 1: Loop Closure ===');
 function createFunctionsWithVar() {
     const functions = [];
     for (var i = 0; i < 3; i++) {
-        functions.push(function() {
+        functions.push(function () {
             return i;
         });
     }
@@ -23,7 +23,7 @@ console.log(funcsVar[2]()); // 3 (not 2!)
 function createFunctionsWithLet() {
     const functions = [];
     for (let i = 0; i < 3; i++) {
-        functions.push(function() {
+        functions.push(function () {
             return i;
         });
     }
@@ -38,7 +38,7 @@ console.log(funcsLet[2]()); // 2
 // Question 2: setTimeout and Closures
 console.log('\n=== Question 2: setTimeout Closure ===');
 for (var j = 0; j < 3; j++) {
-    setTimeout(function() {
+    setTimeout(function () {
         console.log(j); // Prints 3, 3, 3
     }, 100);
 }
@@ -46,8 +46,8 @@ for (var j = 0; j < 3; j++) {
 // Solutions:
 // 1. Use IIFE
 for (var k = 0; k < 3; k++) {
-    (function(index) {
-        setTimeout(function() {
+    (function (index) {
+        setTimeout(function () {
             console.log('IIFE:', index);
         }, 200);
     })(k);
@@ -55,7 +55,7 @@ for (var k = 0; k < 3; k++) {
 
 // 2. Use let
 for (let m = 0; m < 3; m++) {
-    setTimeout(function() {
+    setTimeout(function () {
         console.log('let:', m);
     }, 300);
 }
@@ -65,12 +65,12 @@ console.log('\n=== Question 3: Closure and this ===');
 const obj = {
     name: 'Object',
     methods: {
-        func1: function() {
-            return function() {
+        func1: function () {
+            return function () {
                 return this.name; // 'this' is window/global
             };
         },
-        func2: function() {
+        func2: function () {
             return () => this.name; // 'this' is obj
         }
     }
@@ -87,7 +87,7 @@ console.log('\n=== Question 4: Memory Leak ===');
 function createHeavyClosure() {
     const heavyData = new Array(1000000).fill('heavy');
 
-    return function() {
+    return function () {
         return heavyData.length;
     };
 }
@@ -100,7 +100,7 @@ console.log('\n=== Question 5: Event Handler Closure ===');
 function setupEventHandler() {
     const button = { id: 'btn1' };
 
-    button.onclick = function() {
+    button.onclick = function () {
         console.log('Button clicked:', this.id); // 'this' is button
     };
 
@@ -115,12 +115,12 @@ console.log('\n=== Question 6: Private Variables ===');
 function Counter() {
     let count = 0;
 
-    this.increment = function() {
+    this.increment = function () {
         count++;
         return count;
     };
 
-    this.getCount = function() {
+    this.getCount = function () {
         return count;
     };
 }
